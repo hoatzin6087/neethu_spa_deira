@@ -167,18 +167,21 @@ img.animated.pulse {
 }
 
 .staff-slider {
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding: .3rem 0;
     /* allow horizontal pan on touch devices and prevent vertical page scroll while dragging */
     touch-action: pan-x;
     -ms-touch-action: pan-x;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .staff-track {
     display: flex;
     width: max-content;
     gap: 1rem;
-    animation: slideStaff 18s linear infinite;
+    animation: none;
 }
 
 .staff-card {
@@ -188,6 +191,7 @@ img.animated.pulse {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(173, 65, 175, 0.2);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    scroll-snap-align: start;
 }
 
 .staff-card img {
@@ -244,7 +248,8 @@ img.animated.pulse {
 }
 
 .image-slider-frame {
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     border-radius: 24px;
     padding: 1rem;
     border: 1px solid rgba(173, 65, 175, 0.2);
@@ -253,18 +258,21 @@ img.animated.pulse {
     /* allow horizontal pan on touch devices and prevent vertical page scroll while dragging */
     touch-action: pan-x;
     -ms-touch-action: pan-x;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
 .image-slider-track {
     display: flex;
     width: max-content;
     gap: 1rem;
-    animation: slideImages 24s linear infinite;
+    animation: none;
 }
 
 .image-slide {
     flex: 0 0 auto;
     width: 280px;
+    scroll-snap-align: start;
 }
 
 .image-slide img {
@@ -286,6 +294,16 @@ img.animated.pulse {
     to {
         transform: translateX(-50%);
     }
+}
+
+.image-slider-frame::-webkit-scrollbar,
+.staff-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.image-slider-frame,
+.staff-slider {
+    scrollbar-width: none;
 }
 
 .btn {
