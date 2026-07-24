@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Neethu's - 4 Star Hotel Spa & Massage</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Meta Description (155–160 chars for Google) -->
+    <meta name="description" content="Neethu's Spa in Dubai offers the best massage in Dubai, full body massage Dubai, spa in Deira Dubai, massage in Deira Dubai, Ayurvedic massage Dubai, and Moroccan bath Dubai experiences.">
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="best massage in Dubai, full body massage Dubai, spa in Deira Dubai, massage in Deira Dubai, Ayurvedic massage Dubai, Moroccan bath Dubai, Dubai spa massage, Deira spa, luxury spa Dubai, Ayurvedic spa Dubai, Thai massage Dubai, Swedish massage Dubai, deep tissue massage Dubai, aroma massage Dubai, hot stone massage Dubai, four hand massage Dubai, jacuzzi bath Dubai, head neck shoulder massage Dubai">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Neethu's Spa Dubai | Ayurvedic Spa & Wellness Center">
+    <meta property="og:description" content="Discover Neethu's Spa in Dubai – authentic Ayurvedic treatments, massages, and holistic wellness therapies for relaxation and rejuvenation.">
+    <!-- <meta property="og:type" content="website"> -->
+    <!-- <meta property="og:url" content="https://yourdomain.com/"> -->
+    <!-- <meta property="og:image" content="https://yourdomain.com/images/spa-thumbnail.jpg"> -->
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@200;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="luxury-body">
+
+    <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content" style="background: transparent; border: none;">
+                <div class="modal-body position-relative p-0">
+                    <button type="button" class="btn-close btn-close-white p-3" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px; z-index: 1051; background-color: rgba(0, 0, 0, 0.55); border-radius: 50%;"></button>
+                    <div id="imagePreviewModalBody" class="d-flex justify-content-center align-items-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: rgb(24, 43, 41);">
+
+                <div class="modal-body position-relative p-0">
+                    <button type="button" class="btn-close bg-danger p-3" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 10px; right: 10px; z-index: 1051; color: white; font-weight: bold;">✕</button>
+
+                    <div class="popup-slider-wrapper">
+                        <div class="popup-slider" id="popupSlider">
+                            <div class="popup-slide">
+                                <img src="img/popup-1-offer-image.jpg" class="img-fluid" alt="Offer Poster 1">
+                            </div>
+                            <div class="popup-slide">
+                                <img src="img/popup-2-offer-image.jpg" class="img-fluid" alt="Offer Poster 2">
+                            </div>
+                            <div class="popup-slide">
+                                <img src="img/popup-3-offer-image.jpg" class="img-fluid" alt="Offer Poster 3">
+                            </div>
+                        </div>
+                        <div class="popup-dots" aria-label="Offer poster navigation">
+                            <span class="popup-dot active" data-slide="0"></span>
+                            <span class="popup-dot" data-slide="1"></span>
+                            <span class="popup-dot" data-slide="2"></span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mb-3 mt-3">
+                        <a href="https://wa.me/971554774865" class="btn py-2 px-4 me-3 animated slideInRight" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                        <a href="tel:+971554774865" class="btn btn-outline-primary py-2 px-4 animated slideInRight">Call Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a href="index.html" class="navbar-brand">
+                     <img src="./img/neethus-spa-logo.png" alt="logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="services.html" class="nav-item nav-link">Services</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary hero-header mb-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="luxury-badge animated slideInRight">4 Star Hotel Spa</span>
+                    <h3 class="fw-bold animated slideInRight" style="color: #ffffff; text-shadow: 0 0 18px rgba(240, 178, 232, 0.35);">Relax. <span style="color: #f0b2e8;">Refresh.</span> Rejuvenate.</h3>
+                    <p class="text-white mb-4 animated slideInRight">Escape the everyday and indulge in premium 4 Star Hotel Spa massage therapies, including the best massage in Dubai, full body massage Dubai, Ayurvedic massage Dubai, and spa in Deira Dubai services designed to restore balance, comfort, and inner peace.</p>
+                    <a href="https://wa.me/971554774865" class="btn py-2 px-4 me-3 animated slideInRight" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                    <a href="tel:+971554774865" class="btn btn-outline-primary py-2 px-4 animated slideInRight">Call Now</a>
+                </div>
+                <div class="col-lg-6">
+                    <!-- <img class="img-fluid animated pulse infinite" src="img/main wall pic.jpg" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Offer Section Start -->
+    <div class="container-fluid py-4">
+        <div class="container">
+            <div class="offer-banner wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <span class="offer-label">Our Offer</span>
+                        <h2 class="mb-2">4 Star Hotel Spa Packages for Your Perfect Escape</h2>
+                        <p class="mb-0">Enjoy premium 4 Star Hotel Spa Ayurvedic, Thai, Swedish, and Hot Stone massages in a serene Deira setting with exclusive wellness offers crafted for your relaxation and for the best massage in Dubai experience.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="https://wa.me/971554774865" class="btn btn-primary">Book Your Offer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offer Section End -->
+
+    <!-- Staff & Nationality Start -->
+    <div class="container-fluid py-3">
+        <div class="container">
+            <div class="staff-slider wow fadeInUp" data-wow-delay="0.1s">
+                <div class="staff-track">
+                    <div class="staff-card">
+                        <img src="img/staff_kerala.png" alt="Kerala staff">
+                        <div class="staff-info">
+                            <p>Kerala</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_mumbai.png" alt="Mumbai staff">
+                        <div class="staff-info">
+                            <p>Mumbai</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_tamil.png" alt="Tamil staff">
+                        <div class="staff-info">
+                            <p>Tamil</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_russia.png" alt="Russia staff">
+                        <div class="staff-info">
+                            <p>Russia</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_vietnam.png" alt="Vietnam staff">
+                        <div class="staff-info">
+                            <p>Vietnam</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_pak.png" alt="Pakistan staff">
+                        <div class="staff-info">
+                            <p>Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_arabic.png" alt="Arabic staff">
+                        <div class="staff-info">
+                            <p>Arabic</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_thai.png" alt="Thailand staff">
+                        <div class="staff-info">
+                            <p>Thailand</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_moroccan.png" alt="Moroccan staff">
+                        <div class="staff-info">
+                            <p>Moroccan</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_egypt.png" alt="Egypt staff">
+                        <div class="staff-info">
+                            <p>Egypt</p>
+                        </div>
+                    </div>
+                    <div class="staff-card">
+                        <img src="img/staff_philippines.png" alt="Philippines staff">
+                        <div class="staff-info">
+                            <p>Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Staff & Nationality End -->
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5" id="services">
+        <div class="container">
+            <h1 class="display-4 mb-5 text-center wow fadeInUp" data-wow-delay="0.1s"><span class="fw-light" style="color: #ffffff;">Our</span> <span style="color: #f0b2e8;">Services</span></h1>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/ayurvedic_spa.png">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;"><span class="fw-light" style="color: #f0b2e8;">Special </span>Ayurvedic Massage</h1>
+                    <p class="mb-4">Experience the benefits of authentic <strong>Ayurvedic Massage in Dubai</strong> at <strong>Neethu's Spa</strong>. Our treatment uses premium herbal oils and traditional Ayurvedic techniques to relieve stress, reduce muscle tension, improve blood circulation, ease body pain, and promote deep relaxation. Whether you're searching for the <strong>best Ayurvedic massage in Dubai</strong>, <strong>Ayurvedic spa in Deira</strong>, or a <strong>relaxing herbal oil massage</strong>, our experienced therapists provide a rejuvenating wellness experience that restores your body, mind, and energy naturally.</p>
+                    <ul class="mb-4 text-white-50">
+                        <li>🌿 Relieves stress and anxiety</li>
+                        <li>💆 Eases muscle pain and stiffness</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌸 Promotes better sleep and relaxation</li>
+                        <li>✨ Restores energy and overall well-being</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Text Column -->
+                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;">
+                        <span class="fw-light" style="color: #f0b2e8;">Aroma </span>Massage
+                    </h1>
+                    <p class="mb-4">
+                        Relax and rejuvenate with our <strong>Aroma Massage in Dubai</strong>, combining gentle massage techniques with premium essential oils to calm the body and mind. This soothing therapy helps relieve stress, reduce muscle tension, improve blood circulation, and promote deep relaxation. If you're looking for the <strong>best aroma massage in Dubai</strong>, <strong>aromatherapy massage in Deira</strong>, or a peaceful spa experience, our professional therapists provide the perfect escape for complete wellness.
+                    </p>
+                    <ul class="mb-4 text-white-50">
+                        <li>🌿 Relieves stress and anxiety</li>
+                        <li>💆 Reduces muscle tension and fatigue</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌸 Promotes deep relaxation and better sleep</li>
+                        <li>✨ Refreshes the body and mind</li>
+                        <li>🌺 Nourishes the skin with natural essential oils</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/aroma-massage.png" alt="Aroma Massage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/thai-sport-massage_thai.png">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;"><span class="fw-light" style="color: #f0b2e8;">Thai Sport </span>Massage</h1>
+                    <p class="mb-4">Recover, recharge, and perform at your best with our <strong>Thai Sports Massage in Dubai</strong>. Designed for active individuals and anyone with muscle tension, this therapeutic massage combines traditional Thai stretching techniques with deep pressure to relieve muscle soreness, improve flexibility, and enhance recovery. If you're looking for the <strong>best Thai Sports Massage in Dubai</strong> or a <strong>sports massage in Deira</strong>, our experienced therapists provide a professional treatment tailored to your needs.</p>
+                    <ul class="mb-4 text-white-50">
+                        <li>💪 Relieves muscle pain and stiffness</li>
+                        <li>🏃 Supports faster muscle recovery</li>
+                        <li>🤸 Improves flexibility and range of motion</li>
+                        <li>❤️ Enhances blood circulation</li>
+                        <li>🌿 Reduces stress and body fatigue</li>
+                        <li>⚡ Helps prevent muscle injuries and promotes overall physical wellness</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Text Column -->
+                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;">
+                        <span class="fw-light" style="color: #f0b2e8;">Swedish </span>Massage
+                    </h1>
+                    <p class="mb-4">
+                        Experience complete relaxation with our <strong>Swedish Massage in Dubai</strong>, one of the most popular massage therapies for relieving stress and improving overall well-being. Using gentle, flowing strokes and soothing techniques, our professional therapists help reduce muscle tension, improve blood circulation, ease body aches, and promote deep relaxation. If you're looking for the <strong>best Swedish massage in Dubai</strong> or a <strong>relaxing massage in Deira</strong>, Neethu's Spa offers a premium wellness experience in a peaceful, luxurious setting.
+                    </p>
+                    <ul class="mb-4 text-white-50">
+                        <li>💆 Relieves stress and promotes relaxation</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌿 Reduces muscle tension and body aches</li>
+                        <li>😴 Promotes better sleep and mental wellness</li>
+                        <li>✨ Increases flexibility and overall comfort</li>
+                        <li>🌸 Refreshes the body and mind</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/swedish_massage_arabic.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/deep_tissue_tamil.png">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;"><span class="fw-light" style="color: #f0b2e8;">Deep Tissue </span>Massage</h1>
+                    <p class="mb-4">Relieve chronic muscle tension and restore your body's mobility with our <strong>Deep Tissue Massage in Dubai</strong>. This therapeutic massage targets deeper layers of muscles and connective tissues to reduce pain, ease stiffness, improve circulation, and promote faster recovery. If you're searching for the <strong>best Deep Tissue Massage in Dubai</strong> or a <strong>professional massage in Deira</strong>, our experienced therapists provide personalized treatments in a calm and luxurious spa environment.</p>
+                    <ul class="mb-4 text-white-50">
+                        <li>💪 Relieves chronic muscle pain and tension</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌿 Reduces stiffness and inflammation</li>
+                        <li>🤸 Enhances flexibility and mobility</li>
+                        <li>⚡ Speeds up muscle recovery</li>
+                        <li>😌 Promotes deep relaxation and overall wellness</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Text Column -->
+                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;">
+                        <span class="fw-light" style="color: #f0b2e8;">Four Hand </span>Massage
+                    </h1>
+                    <p class="mb-4">
+                        Indulge in the ultimate relaxation with our <strong>Four Hand Massage in Dubai</strong>, where two professional therapists work in perfect harmony to deliver a synchronized full-body massage. This luxurious treatment enhances relaxation, relieves muscle tension, improves blood circulation, and provides a deeply calming experience. If you're looking for the <strong>best Four Hand Massage in Dubai</strong> or a <strong>luxury spa in Deira</strong>, Neethu's Spa offers an unforgettable wellness experience.
+                    </p>
+                    <ul class="mb-4 text-white-50">
+                        <li>🤲 Synchronized massage by two skilled therapists</li>
+                        <li>💆 Relieves stress and deep muscle tension</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌿 Promotes total body relaxation</li>
+                        <li>⚡ Reduces fatigue and restores energy</li>
+                        <li>✨ Leaves you feeling refreshed, balanced, and rejuvenated</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/four_hand_russia_vietnam.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/hot_stone_egypt.png">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;"><span class="fw-light" style="color: #f0b2e8;">Hot Stone </span>Massage</h1>
+                    <p class="mb-4">Relax and rejuvenate with our <strong>Hot Stone Massage in Dubai</strong>, a soothing therapy that uses smooth, heated stones to ease muscle tension, improve blood circulation, and promote deep relaxation. Combined with expert massage techniques, this treatment helps relieve stress, reduce body aches, and restore balance to your body and mind. If you're searching for the <strong>best Hot Stone Massage in Dubai</strong> or a <strong>luxury spa in Deira</strong>, Neethu's Spa offers a truly calming wellness experience.</p>
+                    <ul class="mb-4 text-white-50">
+                        <li>🔥 Relieves muscle tension and body pain</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌿 Reduces stress and anxiety</li>
+                        <li>💆 Promotes deep relaxation</li>
+                        <li>😴 Helps improve sleep quality</li>
+                        <li>✨ Restores energy and overall well-being</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <!-- Text Column -->
+                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;">
+                        <span class="fw-light" style="color: #f0b2e8;">Head, Neck & Shoulder </span>Massage
+                    </h1>
+                    <p class="mb-4">
+                        Relieve everyday stress with our <strong>Head, Neck &amp; Shoulder Massage in Dubai</strong>, designed to ease tension in the areas most affected by work, travel, and daily activities. Our skilled therapists use gentle yet effective techniques to reduce stiffness, improve blood circulation, relieve headaches, and promote deep relaxation. If you're looking for the <strong>best Head, Neck &amp; Shoulder Massage in Dubai</strong> or a <strong>relaxing massage in Deira</strong>, Neethu's Spa offers the perfect escape.
+                    </p>
+                    <ul class="mb-4 text-white-50">
+                        <li>💆 Relieves neck, shoulder, and upper back tension</li>
+                        <li>🌿 Reduces stress, headaches, and mental fatigue</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>💪 Eases muscle stiffness and pain</li>
+                        <li>😌 Promotes relaxation and better sleep</li>
+                        <li>✨ Refreshes the body and mind</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/head_nec_shoulder_pakistani.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/moroccan_bath_massage.png" alt="Moroccan Bath with Massage">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;"><span class="fw-light" style="color: #f0b2e8;">Moroccan Bath </span>with Massage</h1>
+                    <p class="mb-4">Indulge in the ultimate spa experience with our <strong>Moroccan Bath with Massage in Dubai</strong>. Begin with a traditional Moroccan Bath to deeply cleanse and exfoliate your skin, followed by a relaxing full-body massage that relieves muscle tension, improves blood circulation, and restores your body and mind. If you're looking for the <strong>best Moroccan Bath with Massage in Dubai</strong> or a <strong>luxury spa in Deira</strong>, Neethu's Spa offers the perfect blend of cleansing, relaxation, and wellness.</p>
+                    <ul class="mb-4 text-white-50">
+                        <li>🛁 Deeply cleanses and exfoliates the skin</li>
+                        <li>✨ Removes dead skin cells for a soft, glowing complexion</li>
+                        <li>💆 Relieves stress and muscle tension</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌿 Detoxifies and refreshes the body</li>
+                        <li>😌 Promotes complete relaxation and overall well-being</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;"><span class="fw-light" style="color: #f0b2e8;">Jacuzzi Bath </span>with Massage</h1>
+                    <p class="mb-4">Enjoy the perfect combination of relaxation and wellness with our <strong>Jacuzzi Bath with Massage in Dubai</strong>. Begin with a soothing Jacuzzi Bath to relax your muscles and improve circulation, followed by a professional full-body massage that relieves stress, reduces muscle tension, and restores your body's natural balance. If you're looking for the <strong>best Jacuzzi Bath with Massage in Dubai</strong> or a <strong>luxury spa in Deira</strong>, Neethu's Spa offers a rejuvenating experience in a calm and elegant setting.</p>
+                    <ul class="mb-4 text-white-50">
+                        <li>💦 Relaxes muscles with warm hydrotherapy</li>
+                        <li>💆 Relieves stress and body fatigue</li>
+                        <li>❤️ Improves blood circulation</li>
+                        <li>🌿 Reduces muscle pain and stiffness</li>
+                        <li>😌 Promotes deep relaxation and better sleep</li>
+                        <li>✨ Leaves you refreshed, revitalized, and rejuvenated</li>
+                    </ul>
+                    <a class="btn py-2 px-4" href="https://wa.me/971506405011" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid animated pulse infinite" src="img/jacuzzi_massage_philippines.png" alt="Jacuzzi Bath with Massage">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="row g-5 justify-content-center text-center">
+                <h1 class="display-4 mb-5 wow fadeInUp" data-wow-delay="0.1s"><span class="fw-light" style="color: #ffffff;">About</span> <span style="color: #f0b2e8;">Us</span></h1>
+                <div class="col-lg-10 wow fadeIn" data-wow-delay="0.1s">
+                    <img class="img-fluid rounded-4 mb-4 about-banner-image" src="img/welcoming_banner.jpg" alt="Neethu Spa welcome banner">
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-4 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;">Neethu <span class="fw-light" style="color: #f0b2e8;">Spa Deira Dubai</span></h1>
+                    <p class="mb-4">At <strong>Neethu's Spa</strong>, we believe that true wellness begins with relaxation. Located inside the <strong>4-Star Concorde Hotel</strong> in Deira, Dubai, we provide a luxurious <strong>4 Star Hotel Spa</strong> experience with professional therapists dedicated to your comfort and well-being.</p>
+                    <p class="mb-4">From traditional <strong>Ayurvedic Massage</strong> to <strong>Thai Massage, Full Body Massage, Deep Tissue Massage, Moroccan Bath, Jacuzzi Bath, and Aroma Oil Massage</strong>, every treatment is designed to relieve stress, improve circulation, ease muscle tension, and restore balance to your body and mind.</p>
+                    <p class="mb-4">Our elegant treatment rooms, calming atmosphere, premium-quality oils, and exceptional customer service make Neethu's Spa one of the preferred destinations for a premium 4 Star Hotel Spa experience in Dubai.</p>
+                    <p class="mb-4">Whether you're a resident or visiting Dubai, let us help you relax, recharge, and feel your best.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Gallery Start -->
+    <!-- <div class="container-fluid py-5">
+        <div class="container">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="text-primary mb-3"><span class="fw-light text-dark">Our Spa</span> Gallery</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 col-sm-6">
+                    <img class="img-fluid rounded" src="img/gallery-1.jpeg" alt="Spa Photo 1">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img class="img-fluid rounded" src="img/gallery-2.jpeg" alt="Spa Photo 2">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <img class="img-fluid rounded" src="img/gallery-3.jpeg" alt="Spa Photo 3">
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Gallery End -->
+
+
+    <!-- Google Profile & Gallery Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="google-profile-card">
+                        <span class="eyebrow">Google Profile</span>
+                        <h2 class="mb-3" style="color: #ffffff;">Discover Neethu's Spa on Google</h2>
+                        <p class="mb-4">Open our Google profile for directions, reviews, and the latest updates about your premium 4 Star Hotel Spa experience in Deira.</p>
+                        <a class="btn btn-primary" href="https://share.google/kwexFKr3e2CnYPlv3" target="_blank" rel="noopener noreferrer">Open Google Profile</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="image-slider-frame">
+                        <div class="image-slider-track google-profile-gallery">
+                            <div class="image-slide"><img src="img/Google-1.PNG" alt="Google profile image 1"></div>
+                            <div class="image-slide"><img src="img/Google-2.PNG" alt="Google profile image 2"></div>
+                            <div class="image-slide"><img src="img/Google-3.PNG" alt="Google profile image 3"></div>
+                            <div class="image-slide"><img src="img/Google-4.PNG" alt="Google profile image 4"></div>
+                            <div class="image-slide"><img src="img/Google-5.PNG" alt="Google profile image 5"></div>
+                            <div class="image-slide"><img src="img/Google-6.PNG" alt="Google profile image 6"></div>
+                            <div class="image-slide"><img src="img/Google-7.PNG" alt="Google profile image 7"></div>
+                            <div class="image-slide"><img src="img/Google-8.PNG" alt="Google profile image 8"></div>
+                            <div class="image-slide"><img src="img/Google-9.PNG" alt="Google profile image 9"></div>
+                            <div class="image-slide"><img src="img/Google-10.jpeg" alt="Google profile image 10"></div>
+                            <div class="image-slide"><img src="img/Google-1.PNG" alt="Google profile image 1"></div>
+                            <div class="image-slide"><img src="img/Google-2.PNG" alt="Google profile image 2"></div>
+                            <div class="image-slide"><img src="img/Google-3.PNG" alt="Google profile image 3"></div>
+                            <div class="image-slide"><img src="img/Google-4.PNG" alt="Google profile image 4"></div>
+                            <div class="image-slide"><img src="img/Google-5.PNG" alt="Google profile image 5"></div>
+                            <div class="image-slide"><img src="img/Google-6.PNG" alt="Google profile image 6"></div>
+                            <div class="image-slide"><img src="img/Google-7.PNG" alt="Google profile image 7"></div>
+                            <div class="image-slide"><img src="img/Google-8.PNG" alt="Google profile image 8"></div>
+                            <div class="image-slide"><img src="img/Google-9.PNG" alt="Google profile image 9"></div>
+                            <div class="image-slide"><img src="img/Google-10.jpeg" alt="Google profile image 10"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Google Profile & Gallery End -->
+
+    <!-- Contact Info Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="row g-4">
+                <h1 class="display-4 mb-5 text-center wow fadeInUp" data-wow-delay="0.1s"><span class="fw-light" style="color: #ffffff;">Contact</span> <span style="color: #f0b2e8;">Us</span></h1>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="contact-info-item position-relative bg-primary text-center p-3 h-100 d-flex">
+                        <div class="border py-5 px-3 flex-fill">
+                            <i class="fa fa-map-marker-alt fa-3x text-dark mb-4"></i>
+                            <h5 class="text-white">Address</h5>
+                            <h5 class="fw-light text-white">
+                                6th Floor - Concorde Hotel - 40C Street Near Deira Clock Tower Roudabout - Abu Baker Al Siddique St - Deira - Dubai - United Arab Emirates
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="contact-info-item position-relative bg-primary text-center p-3 h-100 d-flex">
+                        <div class="border py-5 px-3 flex-fill">
+                            <i class="fa fa-phone-alt fa-3x text-dark mb-4"></i>
+                            <h5 class="text-white">Call Us</h5>
+                            <h5 class="fw-light text-white">+971 55 477 4865</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="contact-info-item position-relative bg-primary text-center p-3 h-100 d-flex">
+                        <div class="border py-5 px-3 flex-fill">
+                            <i class="fa fa-envelope fa-3x text-dark mb-4"></i>
+                            <h5 class="text-white">Mail Us</h5>
+                            <h5 class="fw-light text-white text-break">neethuspa2@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <!-- Contact Info End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="mx-auto wow fadeIn text-center" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-5 wow fadeInUp" data-wow-delay="0.1s" style="color: #ffffff;"><span class="fw-light" style="color: #f0b2e8;">If You Have Any Query,</span> Please Contact Us</h1>
+            </div>
+            <div class="g-5 d-flex justify-content-center">
+                <div class="col-lg-5 wow fadeIn d-flex justify-content-center">
+                    <div class="map-link-wrapper" style="position:relative; width:100%;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.401629000000!2d55.3260323!3d25.2597819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d9035786649%3A0xe48bd3932c4d63c1!2sNeethus%20Spa!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" width="100%" height="450" style="border:0; pointer-events:none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <a href="https://maps.app.goo.gl/dcCv6onh5vuG2ULL9" target="_blank" rel="noopener noreferrer" style="position:absolute; inset:0; z-index:2; display:block;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-white footer" style="position: relative; overflow: hidden;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img src="img/neethus-spa.png" alt="Neethu's Spa" style="max-width: 180px; width: 100%; display: block;">
+                    </a>
+                    <p class="mb-0"><strong>Neethu's Spa in Deira Dubai</strong> offers premium <strong>Ayurvedic, Full Body, Thai, Swedish, Deep Tissue, Aroma, and Hot Stone Massages</strong>, along with <strong>Moroccan Bath</strong> and <strong>Jacuzzi Bath</strong>. Experience relaxation, stress relief, and natural healing with expert therapists in a luxurious 4 Star Hotel Spa environment.</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>6th Floor - Concorde Hotel - 40C Street Near Deira Clock Tower Roudabout - Abu Baker Al Siddique St - Deira - Dubai - United Arab Emirates</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+971 55 477 4865</p>
+                    <p><i class="fa fa-envelope me-3"></i>neethuspa2@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.facebook.com/people/Neethus-Spa-Deira-Dubai/61553970006531/?locale=en_GB#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-primary me-1" href="https://www.instagram.com/neethus_spa_dubai?igsh=MXByNGFqd2Y3dXBhZw=="><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div>
+                    <div class="text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Neethu's Spa</a>, All Right Reserved.
+                        Designed By <a class="border-bottom" href="#">Hotzin Digital</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        var popupSliderInterval;
+
+        function startPopupSlider() {
+            var $slider = $('#popupSlider');
+            var $dots = $('.popup-dot');
+
+            if ($slider.length === 0) {
+                return;
+            }
+
+            var slideIndex = 0;
+            var totalSlides = $slider.find('.popup-slide').length;
+
+            function showSlide(index) {
+                slideIndex = (index + totalSlides) % totalSlides;
+                $slider.css('transform', 'translateX(-' + (slideIndex * 100) + '%)');
+                $dots.removeClass('active').eq(slideIndex).addClass('active');
+            }
+
+            clearInterval(popupSliderInterval);
+            showSlide(0);
+
+            $dots.off('click').on('click', function () {
+                showSlide(parseInt($(this).data('slide'), 10));
+            });
+
+            popupSliderInterval = setInterval(function () {
+                showSlide(slideIndex + 1);
+            }, 3000);
+        }
+
+        $(window).on('load', function () {
+            $('#myModal').modal('show');
+        });
+
+        $(document).ready(function () {
+            $('.google-profile-gallery .image-slide').on('click', function (e) {
+                e.preventDefault();
+                var $img = $(this).find('img');
+                var src = $img.attr('src');
+                var alt = $img.attr('alt') || 'Google profile image';
+
+                if (!src) {
+                    return;
+                }
+
+                $('#imagePreviewModalBody').html(
+                    '<img src="' + src + '" alt="' + alt + '" class="img-fluid rounded shadow" style="max-height: 80vh; width: auto; max-width: 100%;">'
+                );
+                $('#imagePreviewModal').modal('show');
+            });
+
+            startPopupSlider();
+
+            var $navbarCollapse = $('#navbarCollapse');
+            var $navbarToggler = $('.navbar-toggler');
+
+            function toggleMenuBodyLock() {
+                if ($navbarCollapse.hasClass('show')) {
+                    $('body').addClass('menu-open');
+                } else {
+                    $('body').removeClass('menu-open');
+                }
+            }
+
+            $navbarCollapse.on('shown.bs.collapse hidden.bs.collapse', function () {
+                toggleMenuBodyLock();
+            });
+
+            $navbarCollapse.on('click', '.nav-link', function () {
+                $navbarCollapse.collapse('hide');
+            });
+
+            $navbarToggler.on('click', function (e) {
+                e.stopPropagation();
+            });
+
+            $(document).on('click', function (e) {
+                if (
+                    $navbarCollapse.hasClass('show') &&
+                    !$navbarCollapse.is(e.target) &&
+                    $navbarCollapse.has(e.target).length === 0 &&
+                    !$navbarToggler.is(e.target) &&
+                    $navbarToggler.has(e.target).length === 0
+                ) {
+                    $navbarCollapse.collapse('hide');
+                }
+            });
+
+            $(window).on('resize', function () {
+                if ($(window).width() >= 992) {
+                    $navbarCollapse.collapse('hide');
+                    $('body').removeClass('menu-open');
+                }
+            });
+
+            $('#myModal').on('shown.bs.modal', function () {
+                $('.modal-backdrop').addClass('modal-backdrop-blur');
+                startPopupSlider();
+            });
+
+            $('#myModal').on('hidden.bs.modal', function () {
+                $('.modal-backdrop').removeClass('modal-backdrop-blur');
+                clearInterval(popupSliderInterval);
+            });
+        });
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
