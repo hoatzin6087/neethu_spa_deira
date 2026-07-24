@@ -798,6 +798,8 @@
                     window.addEventListener('resize', updateBounds);
 
                     frame.addEventListener('pointerdown', function (e) {
+                        // prevent default to avoid page vertical scroll while dragging horizontally
+                        e.preventDefault();
                         isDown = true;
                         startX = e.clientX;
                         startTranslate = getTranslate();
@@ -807,6 +809,8 @@
 
                     frame.addEventListener('pointermove', function (e) {
                         if (!isDown) return;
+                        // prevent default to avoid page vertical scroll while dragging
+                        e.preventDefault();
                         var dx = e.clientX - startX;
                         var newTranslate = startTranslate + dx;
                         // simple overscroll resistance

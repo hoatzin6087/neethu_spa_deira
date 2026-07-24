@@ -169,6 +169,9 @@ img.animated.pulse {
 .staff-slider {
     overflow: hidden;
     padding: .3rem 0;
+    /* allow horizontal pan on touch devices and prevent vertical page scroll while dragging */
+    touch-action: pan-x;
+    -ms-touch-action: pan-x;
 }
 
 .staff-track {
@@ -247,6 +250,9 @@ img.animated.pulse {
     border: 1px solid rgba(173, 65, 175, 0.2);
     background: rgba(255, 255, 255, 0.04);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+    /* allow horizontal pan on touch devices and prevent vertical page scroll while dragging */
+    touch-action: pan-x;
+    -ms-touch-action: pan-x;
 }
 
 .image-slider-track {
