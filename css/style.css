@@ -681,3 +681,35 @@ p {
     padding-right: 0;
     border-right: none;
 }
+
+/* Mobile width fixes: prevent horizontal overflow and make slider cards responsive */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+    .image-slide,
+    .staff-card {
+        flex: 0 0 80vw;
+        max-width: 280px;
+    }
+
+    .image-slide img,
+    .staff-card img {
+        height: auto;
+    }
+
+    .container-fluid.py-5 > .container {
+        padding: 1rem;
+    }
+
+    .hero-header {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    .navbar .navbar-brand img {
+        height: 48px;
+    }
+}
