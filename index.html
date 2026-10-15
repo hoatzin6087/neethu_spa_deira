@@ -105,21 +105,22 @@
 
                     <div class="popup-slider-wrapper">
                         <div class="popup-slider" id="popupSlider">
-                            <div class="popup-slide">
-                                <img src="img/popup-1-offer-image.jpg" class="img-fluid" alt="Offer Poster 1">
+                            <div class="popup-slide" data-caption="Kerala Ayurvedic Massage: enjoy 20% off your wellness treatment.">
+                                <img src="img/popup_kerala_ayurvedic_massage_deira.png" class="img-fluid" alt="20% off Kerala Ayurvedic Massage at Neethu's Spa">
                             </div>
-                            <div class="popup-slide">
-                                <img src="img/popup-2-offer-image.jpg" class="img-fluid" alt="Offer Poster 2">
-                            </div>
-                            <div class="popup-slide">
-                                <img src="img/popup-3-offer-image.jpg" class="img-fluid" alt="Offer Poster 3">
+                            <div class="popup-slide" data-caption="Ayurvedic Massage + Moroccan Bath combo: enjoy 20% off your wellness experience.">
+                                <img src="img/popup_moroccan-bath_ayurvedic_spa_wellness_offer_deira.png" class="img-fluid" alt="20% off Ayurvedic Massage and Moroccan Bath combo at Neethu's Spa">
                             </div>
                         </div>
                         <div class="popup-dots" aria-label="Offer poster navigation">
-                            <span class="popup-dot active" data-slide="0"></span>
-                            <span class="popup-dot" data-slide="1"></span>
-                            <span class="popup-dot" data-slide="2"></span>
+                            <button type="button" class="popup-dot active" data-slide="0" aria-label="Show Ayurvedic Massage offer"></button>
+                            <button type="button" class="popup-dot" data-slide="1" aria-label="Show Massage and Moroccan Bath combo offer"></button>
                         </div>
+                    </div>
+                    <div class="popup-offer-details text-center px-3 pt-3" aria-live="polite">
+                        <p id="popupOfferCaption" class="mb-2">Kerala Ayurvedic Massage: enjoy 20% off your wellness treatment.</p>
+                        <p class="popup-countdown-label mb-1">Limited-time offer ends in</p>
+                        <p id="popupCountdown" class="popup-countdown mb-0" role="timer" aria-label="Two hours remaining">02:00:00</p>
                     </div>
                     <div class="d-flex justify-content-center mb-3 mt-3">
                         <a href="https://wa.me/971554774865" onclick="return gtag_report_conversion(this.href);" class="btn py-2 px-4 me-3 animated slideInRight" style="background-color: #25D366; border-color: #25D366; color: #fff;">Whatsapp Now</a>
@@ -748,6 +749,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script>
         var popupSliderInterval;
+        var popupCountdownInterval;
 
         function startPopupSlider() {
             var $slider = $('#popupSlider');
@@ -764,6 +766,7 @@
                 slideIndex = (index + totalSlides) % totalSlides;
                 $slider.css('transform', 'translateX(-' + (slideIndex * 100) + '%)');
                 $dots.removeClass('active').eq(slideIndex).addClass('active');
+                $('#popupOfferCaption').text($slider.find('.popup-slide').eq(slideIndex).data('caption'));
             }
 
             clearInterval(popupSliderInterval);
@@ -776,6 +779,45 @@
             popupSliderInterval = setInterval(function () {
                 showSlide(slideIndex + 1);
             }, 3000);
+        }
+
+        function startPopupCountdown() {
+            if (popupCountdownInterval) {
+                return;
+            }
+
+            var storageKey = 'neethusSpaOfferEndsAt';
+            var offerEndTime;
+
+            try {
+                offerEndTime = Number(sessionStorage.getItem(storageKey));
+                if (!Number.isFinite(offerEndTime) || offerEndTime <= 0) {
+                    offerEndTime = Date.now() + (2 * 60 * 60 * 1000);
+                    sessionStorage.setItem(storageKey, String(offerEndTime));
+                }
+            } catch (error) {
+                offerEndTime = Date.now() + (2 * 60 * 60 * 1000);
+            }
+
+            function updateCountdown() {
+                var secondsLeft = Math.max(0, Math.floor((offerEndTime - Date.now()) / 1000));
+                var hours = String(Math.floor(secondsLeft / 3600)).padStart(2, '0');
+                var minutes = String(Math.floor((secondsLeft % 3600) / 60)).padStart(2, '0');
+                var seconds = String(secondsLeft % 60).padStart(2, '0');
+
+                $('#popupCountdown').text(hours + ':' + minutes + ':' + seconds);
+                $('#popupCountdown').attr('aria-label', hours + ' hours, ' + minutes + ' minutes, ' + seconds + ' seconds remaining');
+
+                if (secondsLeft === 0) {
+                    $('.popup-countdown-label').text('This offer window has ended');
+                    $('#popupOfferCaption').text('Contact us for our current spa packages.');
+                    $('#popupCountdown').attr('aria-label', 'Offer period ended');
+                    clearInterval(popupCountdownInterval);
+                }
+            }
+
+            updateCountdown();
+            popupCountdownInterval = setInterval(updateCountdown, 1000);
         }
 
         $(window).on('load', function () {
@@ -849,6 +891,7 @@
             $('#myModal').on('shown.bs.modal', function () {
                 $('.modal-backdrop').addClass('modal-backdrop-blur');
                 startPopupSlider();
+                startPopupCountdown();
             });
 
             $('#myModal').on('hidden.bs.modal', function () {

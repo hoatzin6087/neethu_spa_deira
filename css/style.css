@@ -605,8 +605,8 @@ p {
 .popup-slide img {
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: min(52vh, 520px);
+    object-fit: contain;
 }
 
 .popup-dots {
@@ -622,6 +622,7 @@ p {
 .popup-dot {
     width: 10px;
     height: 10px;
+    padding: 0;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.95);
@@ -632,6 +633,38 @@ p {
 .popup-dot.active {
     background: #25D366;
     transform: scale(1.15);
+}
+
+.popup-offer-details {
+    color: #fff;
+}
+
+.popup-offer-details p {
+    color: inherit;
+}
+
+.popup-countdown-label {
+    color: #f0b2e8 !important;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.popup-countdown {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 575.98px) {
+    .popup-slide img {
+        height: 42vh;
+    }
+
+    #myModal .modal-body > .d-flex {
+        flex-wrap: wrap;
+        gap: .5rem;
+        padding: 0 .75rem;
+    }
 }
 
 .footer {
